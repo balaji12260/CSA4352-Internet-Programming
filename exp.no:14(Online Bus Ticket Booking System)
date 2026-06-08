@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Bus Ticket Booking System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e6f0ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0d6efd;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0b5ed7;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function bookBus() {
+            let name = document.getElementById("name").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let date = document.getElementById("date").value;
+
+            if (name === "" || from === "" || to === "" || date === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Bus Ticket Booked Successfully!";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Online Bus Ticket Booking System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Book Your Bus Ticket</h2>
+
+    <label>Passenger Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>From:</label>
+    <input type="text" id="from" placeholder="Departure city">
+
+    <label>To:</label>
+    <input type="text" id="to" placeholder="Destination city">
+
+    <label>Travel Date:</label>
+    <input type="date" id="date">
+
+    <button onclick="bookBus()">Book Ticket</button>
+
+    <p id="message"></p>
+
+</div>
+
+</body>
+</html>
