@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Beauty Parlour Appointment System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #cc0066;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #cc0066;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #cc0066;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #99004d;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function bookAppointment() {
+            let name = document.getElementById("name").value;
+            let service = document.getElementById("service").value;
+            let date = document.getElementById("date").value;
+
+            if (name === "" || service === "" || date === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Appointment Booked Successfully!";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Beauty Parlour Appointment System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Book Your Appointment</h2>
+
+    <label>Customer Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Select Service:</label>
+    <select id="service">
+        <option value="">--Select Service--</option>
+        <option>Facial</option>
+        <option>Hair Cut</option>
+        <option>Makeup</option>
+        <option>Manicure & Pedicure</option>
+    </select>
+
+    <label>Appointment Date:</label>
+    <input type="date" id="date">
+
+    <button onclick="bookAppointment()">Book Appointment</button>
+
+    <p id="message"></p>
+
+</div>
+
+</body>
+</html>
