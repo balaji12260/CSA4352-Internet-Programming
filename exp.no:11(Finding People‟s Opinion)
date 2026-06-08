@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>People's Opinion Survey</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef7ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0f6fd1;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .opinion-box {
+            margin-top: 20px;
+        }
+
+        .item {
+            background: #f1f1f1;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+        }
+    </style>
+
+    <script>
+        function submitOpinion() {
+            let name = document.getElementById("name").value;
+            let opinion = document.getElementById("opinion").value;
+
+            if (name === "" || opinion === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            let div = document.createElement("div");
+            div.className = "item";
+            div.innerHTML = "<b>" + name + ":</b> " + opinion;
+
+            document.getElementById("list").appendChild(div);
+
+            document.getElementById("message").innerHTML =
+                "Thank you for your opinion!";
+
+            document.getElementById("name").value = "";
+            document.getElementById("opinion").value = "";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>People's Opinion Web Service</h1>
+</header>
+
+<div class="container">
+
+    <label>Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Your Opinion:</label>
+    <textarea id="opinion" rows="4" placeholder="Write your opinion here..."></textarea>
+
+    <button onclick="submitOpinion()">Submit Opinion</button>
+
+    <p id="message"></p>
+
+    <div class="opinion-box" id="list"></div>
+
+</div>
+
+</body>
+</html>
