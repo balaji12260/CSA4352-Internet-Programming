@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Hotel Room Booking System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8e1;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff9800;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #e68900;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function bookRoom() {
+            let name = document.getElementById("name").value;
+            let roomType = document.getElementById("room").value;
+            let checkin = document.getElementById("checkin").value;
+
+            if (name === "" || roomType === "" || checkin === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Hotel Room Booked Successfully!";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Online Hotel Room Booking System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Book Your Room</h2>
+
+    <label>Guest Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Select Room Type:</label>
+    <select id="room">
+        <option value="">--Select Room--</option>
+        <option>Single Room</option>
+        <option>Double Room</option>
+        <option>Deluxe Room</option>
+        <option>Suite</option>
+    </select>
+
+    <label>Check-in Date:</label>
+    <input type="date" id="checkin">
+
+    <button onclick="bookRoom()">Book Room</button>
+
+    <p id="message"></p>
+
+</div>
+
+</body>
+</html>
