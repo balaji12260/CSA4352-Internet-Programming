@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electronic Gadgets Store</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color:#f4f4f4;
+            text-align:center;
+        }
+
+        h1{
+            background:#222;
+            color:white;
+            padding:15px;
+        }
+
+        .product{
+            display:inline-block;
+            width:250px;
+            background:white;
+            margin:20px;
+            padding:15px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        .product img{
+            width:200px;
+            height:150px;
+            border-radius:5px;
+        }
+
+        .price{
+            color:green;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        button{
+            background:blue;
+            color:white;
+            border:none;
+            padding:10px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:darkblue;
+        }
+    </style>
+
+    <script>
+        function addToCart(item){
+            alert(item + " Added to Cart Successfully!");
+        }
+    </script>
+</head>
+<body>
+
+<h1>Online Shopping System for Electronic Gadgets</h1>
+
+<div class="product">
+    <img src="laptop.jpg" alt="Laptop">
+    <h3>Laptop</h3>
+    <p class="price">₹50,000</p>
+    <button onclick="addToCart('Laptop')">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="phone.jpg" alt="Smartphone">
+    <h3>Smartphone</h3>
+    <p class="price">₹20,000</p>
+    <button onclick="addToCart('Smartphone')">Add to Cart</button>
+</div>
+
+<div class="product">
+    <img src="watch.jpg" alt="Smart Watch">
+    <h3>Smart Watch</h3>
+    <p class="price">₹5,000</p>
+    <button onclick="addToCart('Smart Watch')">Add to Cart</button>
+</div>
+
+</body>
+</html>
