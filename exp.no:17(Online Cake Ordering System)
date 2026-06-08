@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Cake Ordering System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff0f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #d63384;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #d63384;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d63384;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #a61e5c;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function orderCake() {
+            let name = document.getElementById("name").value;
+            let cake = document.getElementById("cake").value;
+            let quantity = document.getElementById("quantity").value;
+
+            if (name === "" || cake === "" || quantity === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Cake Order Placed Successfully!";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Online Cake Ordering System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Order Your Cake</h2>
+
+    <label>Customer Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Select Cake Flavor:</label>
+    <select id="cake">
+        <option value="">--Select Cake--</option>
+        <option>Chocolate Cake</option>
+        <option>Vanilla Cake</option>
+        <option>Strawberry Cake</option>
+        <option>Black Forest Cake</option>
+    </select>
+
+    <label>Quantity:</label>
+    <input type="number" id="quantity" min="1" placeholder="Enter quantity">
+
+    <button onclick="orderCake()">Place Order</button>
+
+    <p id="message"></p>
+
+</div>
+
+</body>
+</html>
