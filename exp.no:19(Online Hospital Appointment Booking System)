@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Hospital Appointment Booking System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0077b6;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #005f8a;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+
+    <script>
+        function bookAppointment() {
+            let name = document.getElementById("name").value;
+            let doctor = document.getElementById("doctor").value;
+            let date = document.getElementById("date").value;
+
+            if (name === "" || doctor === "" || date === "") {
+                alert("Please fill all fields.");
+                return;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Appointment Booked Successfully!";
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Online Hospital Appointment Booking System</h1>
+</header>
+
+<div class="container">
+    <h2>Book an Appointment</h2>
+
+    <label>Patient Name:</label>
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <label>Select Doctor:</label>
+    <select id="doctor">
+        <option value="">--Select Doctor--</option>
+        <option>Dr. Smith - Cardiologist</option>
+        <option>Dr. John - Neurologist</option>
+        <option>Dr. David - Pediatrician</option>
+    </select>
+
+    <label>Appointment Date:</label>
+    <input type="date" id="date">
+
+    <button onclick="bookAppointment()">Book Appointment</button>
+
+    <p id="message"></p>
+</div>
+
+</body>
+</html>
