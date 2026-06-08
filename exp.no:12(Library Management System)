@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4b0082;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .container {
+            width: 50%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #4b0082;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 15px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4b0082;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #360062;
+        }
+
+        #message {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            background: #eee;
+            margin: 5px;
+            padding: 8px;
+            list-style: none;
+        }
+    </style>
+
+    <script>
+        function addBook() {
+            let book = document.getElementById("book").value;
+
+            if (book === "") {
+                alert("Please enter a book name.");
+                return;
+            }
+
+            let li = document.createElement("li");
+            li.textContent = book;
+
+            document.getElementById("bookList").appendChild(li);
+
+            document.getElementById("message").innerHTML =
+                "Book Added Successfully!";
+
+            document.getElementById("book").value = "";
+        }
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>Library Management System</h1>
+</header>
+
+<div class="container">
+
+    <h2>Add Books</h2>
+
+    <label>Book Name:</label>
+    <input type="text" id="book" placeholder="Enter book name">
+
+    <button onclick="addBook()">Add Book</button>
+
+    <p id="message"></p>
+
+    <ul id="bookList"></ul>
+
+</div>
+
+</body>
+</html>
