@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hidden Form Field</title>
+</head>
+<body>
+
+<h2>Enter Your Name</h2>
+
+<form action="HiddenServlet" method="post">
+    Name:
+    <input type="text" name="username">
+    <input type="submit" value="Next">
+</form>
+
+</body>
+</html>
