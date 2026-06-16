@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Servlet Form</title>
+</head>
+<body>
+
+<h2>User Login Form</h2>
+
+<form action="LoginServlet" method="post">
+    User Name:
+    <input type="text" name="username"><br><br>
+
+    Password:
+    <input type="password" name="password"><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
