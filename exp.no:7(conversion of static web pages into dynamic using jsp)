@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html;charset=UTF-8" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic JSP Page</title>
+</head>
+<body>
+
+<h2>Welcome to JSP</h2>
+
+<%
+    String userName = "Balaji";
+    out.println("<h3>Hello, " + userName + "</h3>");
+%>
+
+<p>Current Date and Time:</p>
+
+<%
+    java.util.Date date = new java.util.Date();
+    out.println(date);
+%>
+
+</body>
+</html>
