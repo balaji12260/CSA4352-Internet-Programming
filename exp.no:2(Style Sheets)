@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Style Sheet Example</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        p {
+            color: green;
+            font-size: 18px;
+        }
+
+        .box {
+            background-color: white;
+            border: 2px solid black;
+            padding: 15px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CSS Style Sheet Example</h1>
+
+    <div class="box">
+        <p>This paragraph is styled using CSS.</p>
+        <p>CSS makes webpages attractive and responsive.</p>
+    </div>
+
+</body>
+</html>
