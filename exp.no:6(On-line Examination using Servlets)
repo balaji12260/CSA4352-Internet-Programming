@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Examination</title>
+</head>
+<body>
+
+<h2>Online Examination</h2>
+
+<form action="ExamServlet" method="post">
+
+    <p>1. Java is a ______ language.</p>
+    <input type="radio" name="q1" value="Programming"> Programming
+    <input type="radio" name="q1" value="Markup"> Markup
+
+    <p>2. HTML stands for?</p>
+    <input type="radio" name="q2" value="Hyper Text Markup Language">
+    Hyper Text Markup Language
+    <br>
+    <input type="radio" name="q2" value="High Text Machine Language">
+    High Text Machine Language
+
+    <br><br>
+    <input type="submit" value="Submit Exam">
+
+</form>
+
+</body>
+</html>
