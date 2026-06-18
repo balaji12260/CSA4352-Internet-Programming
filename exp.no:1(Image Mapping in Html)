@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Mapping in HTML</title>
+</head>
+<body>
+
+    <h1>Image Mapping in HTML</h1>
+
+    <img src="computer.jpg" alt="Computer" usemap="#computermap" width="500">
+
+    <map name="computermap">
+        <area shape="rect" coords="50,50,250,200"
+              href="https://www.google.com"
+              alt="Monitor">
+
+        <area shape="circle" coords="350,150,50"
+              href="https://www.wikipedia.org"
+              alt="CPU">
+    </map>
+
+</body>
+</html>
